@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Hole Depth (feet)</h3><input id="First" name="Hole Depth (feet)" required="required">
+            <h3>Bit Depth (feet)</h3><input id="Second" name="Bit Depth (feet)" required="required">
+            <h3>Rate Of Penetration (ft_per_hr)</h3><input id="Third" name="Rate Of Penetration (ft_per_hr)" required="required">
+            <h3>Weight on Bit (klbs)</h3><input id="Fourth" name="Weight on Bit (klbs)" required="required">
+            <h3>Differential Pressure (psi)</h3><input id="Fifth" name="Differential Pressure (psi)" required="required">
+            <h3>Rotary RPM (RPM)</h3><input id="Sixth" name="Rotary RPM (RPM)" required="required">
+            <h3>Standpipe Pressure (psi)</h3><input id="Seventh" name="Standpipe Pressure (psi)" required="required">
+            <h3>Hook Load (klbs)</h3><input id="Eight" name="Hook Load (klbs)" required="required">
+            <h3>Flow (flow_percent)</h3><input id="ninth" name="Flow (flow_percent)" required="required">
+            <h3>Pason Lag Depth (feet)</h3><input id="tenth" name="Pason Lag Depth (feet)" required="required">
+            <h3>Third Party Gas (percent)</h3><input id="Eleventh" name="Third Party Gas (percent)" required="required">
+            <h3>WITS Lag Depth (feet)</h3><input id="Twelth" name="WITS Lag Depth (feet)" required="required">
+            <h3>Total Mud Volume (barrels)</h3><input id="Thirteenth" name="Total Mud Volume (barrels)" required="required">
+            <h3>Block Height (feet)</h3><input id="Fourteenth" name="Block Height (feet)" required="required">
+            <h3>Gamma (api)</h3><input id="Fifteenth" name="Gamma (api)" required="required">
+            <h3>Gamma Depth (feet)</h3><input id="Sixteenth" name="Gamma Depth (feet)" required="required">
+            <h3>Pump 1 strokes/min (SPM)</h3><input id="Seventeenth" name="Pump 1 strokes/min (SPM)" required="required">
+            <h3>On Bottom Hours (hrs)</h3><input id="Eighteenth" name="On Bottom Hours (hrs)" required="required">
+            <h3>Over Pull (klbs)</h3><input id="Nineteenth" name="Over Pull (klbs)" required="required">
+            <h3>Pump 2 strokes/min (SPM)</h3><input id="Twenty" name="Pump 2 strokes/min (SPM)" required="required">
+            <h3>Tool Face (degrees)</h3><input id="Twentyone" name="Tool Face (degrees)" required="required">
+            <h3>Gravity Toolface (degrees)</h3><input id="Twentytwo" name="Gravity Toolface (degrees)" required="required">
+            <h3>Magnetic Toolface (degrees)</h3><input id="Twentythree" name="Magnetic Toolface (degrees)" required="required">
+            <h3>AMAP Info 1 (unitless)</h3><input id="Twentyfour" name="AMAP Info 1 (unitless)" required="required">
+            <h3>AMAP Mode (unitless)</h3><input id="Twentyfive" name="AMAP Mode (unitless)" required="required">
+            <h3>Azimuth (degrees)</h3><input id="Twentysix" name="Azimuth (degrees)" required="required">
+            <h3>Bit RPM (RPM)</h3><input id="Twentyseven" name="Bit RPM (RPM)" required="required">
+            <h3>Convertible Torque (kft_lb)</h3><input id="Twentyeight" name="Convertible Torque (kft_lb)" required="required">
+
+            <br><br><button id="sub" type="submit ">The predicted Total Pump Output (gal_per_min) is</button>
+            <br>
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+    </style>
+</body>
+
+</html>
